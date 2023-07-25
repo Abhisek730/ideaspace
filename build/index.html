@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Idea Space</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    
+        <h1>Idea Space</h1>
+        <div class="modal" id="addModal">
+            <div class="modal-content">
+                <span id="close-modal-btn" class="close-button">&times;</span>
+                <form id="idea-form">
+                    <div>
+                        <label for="hash"><i class="ri-hashtag"></i></label>
+                        <input name="hash" type="text" id="idea-input" placeholder="Add a hash..." />
+                    </div>
+                    
+                    <textarea name="brief" id="brief" cols="30" rows="10" placeholder="Add brief"></textarea>
+                    <button type="submit">Add</button>
+                </form>
+              </div>
+            
+        </div>
+        <div class="modal" id="editModal">
+            <div class="modalContent">
+                <span id="close-modal-btn-edit" class="close-button">&times;</span>
+                <form id="brief-form">            
+                    <textarea name="briefText" id="briefText" cols="30" rows="10" placeholder="Add brief"></textarea>
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+        
+        
+        <div id="idea-list">
+            <div id="addBtn"><div><i class="ri-add-line"></i>Add Idea</div></div>
+        </div>
+    
+
+    <script src="./main.js"></script>
+    <script src="./modal.js"></script>
+
+</body>
+</html>

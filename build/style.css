@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body{
+    
+font-family: 'Poppins', 'Inter', sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 60%;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+} */
+
+.container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+flex-direction: column;
+align-items: center;
+  }
+  
+  h1 {
+    
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 40px 10px;
+    background-color: #fff;
+    max-width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     
+     border-radius: 5px;
+  }
+
+  form div{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    gap: 5px
+    ;
+  }
+  
+  form label {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    width: 36px;
+    height: fit-content;
+  
+    text-align: center
+    ;
+  }
+
+  form label i {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-radius: 3px;
+    padding: 3px;
+  }
+  
+  form input[type="text"],
+  form textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  form textarea {
+    height: 100px;
+  }
+  
+  form button {
+    background-color: #4e4caf;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  #idea-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+  }
+
+  #addBtn , #addBtn > div{
+    background-color: #333;
+    color: white;
+  }
+  
+  #idea-list > div {
+    cursor: pointer;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+
+  #idea-list > div > article i{
+margin: 0px 2px;
+  }
+
+  
+  #idea-list > div > article i:hover{
+    filter: brightness(2.0);
+    
+      }
+  
+
+      .timeline {
+        position: relative;
+        margin: 50px auto;
+        max-width: 800px;
+      }
+      
+      .timeline-item {
+        position: relative;
+        padding-bottom: 50px;
+      }
+      
+      .timeline-content {
+        position: relative;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .timeline-title {
+        margin-top: 0;
+        color: #333;
+      }
+      
+      .timeline-description {
+        margin-bottom: 10px;
+        color: #666;
+      }
+      
+      .timeline-date {
+        font-size: 14px;
+        color: #888;
+      }
+      
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background-color: #ccc;
+      }
+      
+      .timeline-item:first-child::before {
+        top: 50%;
+        height: calc(50% + 25px);
+      }
+      
+      .timeline-item:last-child::before {
+        height: calc(50% + 25px);
+      }
+      
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -25px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      
+      .timeline-item:last-child::after {
+        top: auto;
+        bottom: 0;
+      }
+
+      a{
+        color: inherit;
+        font-size: inherit;
+        text-decoration: none;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      
+.modal-content {
+  /* background-color: #fff; */
+  margin: 10% auto;
+  padding: 40px 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  color: #aaa;
+  /* float: right; */
+  position: absolute;
+  top: 32px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Show modal when the "open" class is added */
+.modal.show {
+  display: block;
+}
+      
+      
+      /* Adjustments for responsiveness */
+      @media screen and (max-width: 600px) {
+        .timeline-content {
+          padding: 10px;
+        }
+      }
+      
