@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function saveTodoItem(ideaText, hashBrief) {
         const ideaItem = { hash: ideaText.trim(), brief: hashBrief };
-        fetch("http://localhost:5000/addIdea", {
+        fetch("/addIdea", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function saveBrief(ideaText, hashBrief) {
         const ideaItem = { hash: ideaText, brief: hashBrief };
-        fetch("http://localhost:5000/addBrief", {
+        fetch("/addBrief", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     // Retrieve ideas from the backend on page load
-    fetch("http://localhost:5000/allIdeas")
+    fetch("/allIdeas")
         .then(response => response.json())
         .then(ideas => {
             ideas.forEach(idea => {
@@ -91,7 +91,7 @@ console.log("timeline loading start");
 function deleteIdea(e){
     console.log(e.id);
     let eid = e.id
-    fetch("http://localhost:5000/deleteIdea", {
+    fetch("/deleteIdea", {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express()
-const port = 5000;
+const port = process.env.port || 5000;
 const mongoose = require("mongoose");
 const cors = require("cors");
 const mongoUrl = "mongodb+srv://ashu:U92zmo6s27b5brI9@cluster0.re3rzqw.mongodb.net/?retryWrites=true&w=majority"
