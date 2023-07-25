@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const urlParams = new URLSearchParams(window.location.search);
     const hash = urlParams.get("hash");
     console.log(hash);
-     fetch(`http://localhost:5000/briefs?hash=${hash}`)
+     fetch(`/briefs?hash=${hash}`)
      .then(response => response.json())
      .then(ideas => {
         console.log(ideas);
