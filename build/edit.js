@@ -20,7 +20,7 @@ briefForm.addEventListener("submit", function (event) {
 
 function saveBrief(ideaText, hashBrief) {
     const ideaItem = { hash: ideaText, brief: hashBrief };
-    fetch("http://localhost:5000/addBrief", {
+    fetch("/addBrief", {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
